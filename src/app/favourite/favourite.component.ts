@@ -3,17 +3,21 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'favourite',
   template: `
-    <p>
-    <span [style.dislpay]="none"><i class="fa fa-star fa-4x" ></i></span>
-    <span ><i class="fa fa-star-o fa-4x" ></i></span>
-    </p>
+   
+    <span (click)="onStarClick()"> 
+    <i class="fa fa-4x " [class.fa-star]="isSelected"></i>
+    <i class="fa fa-4x "[class.fa-star-o]="!isSelected" ></i>
+    </span>
+
   `,
-  styles: []
+  styles: [`
+     span { position: absolute; right:50px; top:3px; }
+    `]
 })
 export class FavouriteComponent implements OnInit {
   isSelected:boolean = false;
 
-  onClick(){
+  onStarClick(){
     this.isSelected=!this.isSelected;
   }
 

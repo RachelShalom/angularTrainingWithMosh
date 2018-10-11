@@ -4,14 +4,16 @@ import { CoursesService } from "./courses.service";
 
 @Component({
     selector:"courses",
-    template:`<h2>{{getTitle()}}</h2>
+    template:`
+    <favourite></favourite>
+    <h2>{{getTitle()}}</h2>
     <p>{{text|summary:20}}</p>
     <ul>
     <li *ngFor="let course of courses">{{course}}</li>
     </ul>
     <div (click)=onDivClick($event)>
     <button (click)= onclick() type="button" class="btn btn-primary">Save</button>
-    <input type="text" #inputRef [(ngModel)]="email" (keydown.enter)="onkeypress()" class="form-control">
+    <input type="text"  [(ngModel)]="email" (keydown.enter)="onkeypress()" class="form-control">
     </div>
     <p>
     {{course.title |uppercase}}<br>
@@ -21,7 +23,8 @@ import { CoursesService } from "./courses.service";
     {{course.date | date:'fullDate'}}<br>
     </p>
     `,
-    //<img [src]= "'https://source.unsplash.com/random'" >
+    // url=https://source.unsplash.com/random
+    //<img [src]= "url" >
     styles:[`table, th, td {
         border: 1px solid black;
     }`]
