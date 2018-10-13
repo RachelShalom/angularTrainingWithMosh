@@ -5,14 +5,13 @@ import { CoursesService } from "./courses.service";
 @Component({
     selector:"courses",
     template:`
-    <favourite></favourite>
     <h2>{{getTitle()}}</h2>
     <p>{{text|summary:20}}</p>
     <ul>
     <li *ngFor="let course of courses">{{course}}</li>
     </ul>
-    <div (click)=onDivClick($event)>
-    <button (click)= onclick() type="button" class="btn btn-primary">Save</button>
+    <div (click)="onDivClick($event)">
+    <button (click)= "onclick()" type="button" class="btn btn-primary">Save</button>
     <input type="text"  [(ngModel)]="email" (keydown.enter)="onkeypress()" class="form-control">
     </div>
     <p>

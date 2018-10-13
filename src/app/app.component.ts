@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'My new App';
+  post={
+      title:"Hello",
+      isFavourite:true
+  }
+  onStarChange(eventArgs){
+      console.log("THe star has changed: "+ JSON.stringify(eventArgs));
+  }
 }

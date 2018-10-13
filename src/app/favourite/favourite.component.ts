@@ -1,24 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'favourite',
   template: `
    
     <span (click)="onStarClick()"> 
-    <i class="fa fa-4x " [class.fa-star]="isSelected"></i>
-    <i class="fa fa-4x "[class.fa-star-o]="!isSelected" ></i>
+    <i class="fa fa-4x " [class.fa-star]="isFavourite"></i>
+    <i class="fa fa-4x "[class.fa-star-o]="!isFavourite" ></i>
     </span>
 
   `,
-  styles: [`
+  styles: [
+    `
      span { position: absolute; right:50px; top:3px; }
     `]
 })
 export class FavouriteComponent implements OnInit {
-  isSelected:boolean = false;
+  @Input('is-selected') isFavourite:boolean;
+  @Output('change') click= new EventEmitter()
 
   onStarClick(){
-    this.isSelected=!this.isSelected;
+    this.isFavourite=!this.isFavourite;
+    this.click.emit({newValue: this.isFavourite});
   }
 
   constructor() { }

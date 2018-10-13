@@ -4,4 +4,5 @@
     Welcome to {{ title }}!
   </h1>
   <title-case></title-case>
-  <courses></courses>
+   <favourite [is-selected]="post.isFavourite" (change)="this.onStarChange($event)"></favourite>
+

@@ -8,7 +8,8 @@ import { CoursesService } from './courses.service';
 import { FormsModule} from '@angular/forms';
 import { SummaryPipe } from './summary.pipe';
 import { FavouriteComponent } from './favourite/favourite.component';
-import { TitleCaseComponent } from './title-case/title-case.component'
+import { TitleCaseComponent } from './title-case/title-case.component';
+import { BootstrapCardComponent } from './bootstrap-card/bootstrap-card.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { TitleCaseComponent } from './title-case/title-case.component'
     CourseComponent,
     SummaryPipe,
     FavouriteComponent,
-    TitleCaseComponent
+    TitleCaseComponent,
+    BootstrapCardComponent
   ],
   imports: [
     BrowserModule,
