@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bootstrap-card',
+  selector: 'bootstrap-card',
   templateUrl: './bootstrap-card.component.html',
   styleUrls: ['./bootstrap-card.component.css']
 })
-export class BootstrapCardComponent implements OnInit {
+export class BootstrapCardComponent  {
 
   constructor() { }
 
-  ngOnInit() {
-  }
 
 }

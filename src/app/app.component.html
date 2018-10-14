@@ -3,6 +3,10 @@
   <h1>
     Welcome to {{ title }}!
   </h1>
-  <title-case></title-case>
+  <bootstrap-card>
+  <ng-container class="subtitle">This is the subtitle</ng-container>
+  <ng-container class="text">this is alot of text really a lot of text isnt it? 
+  blw bla I have to write somthing</ng-container>
+  </bootstrap-card>
    <favourite [is-selected]="post.isFavourite" (change)="this.onStarChange($event)"></favourite>
 
